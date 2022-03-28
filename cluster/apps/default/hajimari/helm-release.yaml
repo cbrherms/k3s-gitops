@@ -33,6 +33,7 @@ spec:
           - default
           - networking
           - longhorn-system
+          - monitoring
       name: "you"
       customApps:
         - name: PiHole-01
