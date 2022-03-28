@@ -34,4 +34,4 @@ spec:
     persistence:
       defaultClass: true
       defaultClassReplicaCount: 3
-      reclaimPolicy: Retain
+      reclaimPolicy: Delete
