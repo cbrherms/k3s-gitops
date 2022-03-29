@@ -5,5 +5,10 @@ metadata:
   name: cluster-settings
   namespace: flux-system
 data:
+  # Servers
+  NAS_ADDR: 192.168.0.12
+  HOMEASSISTANT_ADDR: 192.168.0.43
+
+  # MetalLB
   METALLB_LB_RANGE: 192.168.0.230-192.168.0.250
   METALLB_TRAEFIK_ADDR: 192.168.0.250
