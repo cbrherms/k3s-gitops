@@ -27,7 +27,7 @@ spec:
       supplementalGroups:
         - 816
     env:
-      TZ: "Europe/London"
+      TZ: ${TIMEZONE}
     persistence:
       config:
         enabled: true
