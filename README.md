@@ -7,6 +7,7 @@
 [![k3s](https://img.shields.io/badge/k3s-v1.23.3-blue?style=for-the-badge&logo=kubernetes&logoColor=white)](https://k3s.io/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/cbrherms/k3s-gitops?color=blue&style=for-the-badge)](https://github.com/cbrherms/k3s-gitops/commits/main)
 [![Lines of code](https://img.shields.io/tokei/lines/github/cbrherms/k3s-gitops?style=for-the-badge&color=blue&label=lines&logo=codefactor&logoColor=white)](https://github.com/cbrherms/k3s-gitops/graphs/contributors)
+[![renovate](https://img.shields.io/badge/renovate-enabled-blue?style=for-the-badge)](https://github.com/renovatebot/renovate)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/cbrherms/k3s-gitops)
 
