@@ -8,6 +8,7 @@ spec:
   releaseName: bazarr
   interval: 10m
   chart:
+    # renovate: registryUrl=https://k8s-at-home.com/charts/
     spec:
       chart: bazarr
       version: 10.3.0
