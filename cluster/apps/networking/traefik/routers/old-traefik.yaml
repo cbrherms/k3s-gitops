@@ -1,0 +1,68 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: old-traefik
+  namespace: networking
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: HostSNI(`bazarr.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`jackett.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`nzbhydra.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`organizr.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`plexrequests.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`portainer.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`radarr.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`sabnzbd.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`sonarr.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`tautulli${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`homeassistant.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`octoprint.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`plex.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+    - match: HostSNI(`qbittorrent.${OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
+  tls:
+    passthrough: true

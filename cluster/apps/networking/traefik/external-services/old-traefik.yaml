@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    k8s-app: ${OLD_DOMAIN}
+  name: old-traefik
+  namespace: networking
+spec:
+  type: ExternalName
+  ports:
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 443
+    - port: 80
+      name: http
+      protocol: TCP
+  externalName: ${LB_OLD_TRAEFIK}
+  selector:
+    app.kubernetes.io/instance: old-traefik
+    app.kubernetes.io/name: old-traefik
