@@ -4,5 +4,5 @@ resources:
   - helm-release.yaml
   - dashboard
   - middlewares
-  - extrnal-services
+  - external-services
   - routers
