@@ -44,7 +44,7 @@ spec:
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`tautulli${OLD_DOMAIN}`)
+    - match: HostSNI(`tautulli.${OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
