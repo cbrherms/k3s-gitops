@@ -4,11 +4,14 @@ kind: IngressRoute
 metadata:
   name: plex-server
   namespace: networking
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
   entryPoints:
     - websecure
   routes:
-    - match: HostSNI(`plex.${SECRET_OLD_DOMAIN}`)
+    - kind: Rule
+      match: Host(`plex.${SECRET_OLD_DOMAIN}`)
       services:
         - name: plex-server
           port: 32400
