@@ -16,6 +16,4 @@ spec:
         - name: plex-server
           port: 32400
   tls:
-    - hosts:
-        - "plex.${SECRET_OLD_DOMAIN}"
-      secretName: plex-server-cert
+    secretName: plex-server-cert
