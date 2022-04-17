@@ -1,0 +1,18 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: plex-server
+  namespace: networking
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: HostSNI(`plex.${SECRET_OLD_DOMAIN}`)
+      services:
+        - name: plex-server
+          port: 32400
+  tls:
+    - hosts:
+        - "plex.${SECRET_OLD_DOMAIN}"
+      secretName: plex-server-cert

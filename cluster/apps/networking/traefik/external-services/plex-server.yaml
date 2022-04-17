@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: plex-server
+  namespace: networking
+spec:
+  type: ExternalName
+  ports:
+    - port: 32400
+      targetPort: 32400
+      name: http
+      protocol: TCP
+  externalName: ${PLEX_ADDR}
+  selector:
+    app.kubernetes.io/instance: plex-server
+    app.kubernetes.io/name: plex-server
