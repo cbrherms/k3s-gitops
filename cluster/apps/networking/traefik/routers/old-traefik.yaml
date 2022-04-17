@@ -8,59 +8,59 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: HostSNI(`bazarr.${OLD_DOMAIN}`)
+    - match: HostSNI(`bazarr.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`jackett.${OLD_DOMAIN}`)
+    - match: HostSNI(`jackett.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`nzbhydra.${OLD_DOMAIN}`)
+    - match: HostSNI(`nzbhydra.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`organizr.${OLD_DOMAIN}`)
+    - match: HostSNI(`organizr.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`plexrequests.${OLD_DOMAIN}`)
+    - match: HostSNI(`plexrequests.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`portainer.${OLD_DOMAIN}`)
+    - match: HostSNI(`portainer.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`radarr.${OLD_DOMAIN}`)
+    - match: HostSNI(`radarr.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`sabnzbd.${OLD_DOMAIN}`)
+    - match: HostSNI(`sabnzbd.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`sonarr.${OLD_DOMAIN}`)
+    - match: HostSNI(`sonarr.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`tautulli.${OLD_DOMAIN}`)
+    - match: HostSNI(`tautulli.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`homeassistant.${OLD_DOMAIN}`)
+    - match: HostSNI(`homeassistant.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`octoprint.${OLD_DOMAIN}`)
+    - match: HostSNI(`octoprint.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`plex.${OLD_DOMAIN}`)
+    - match: HostSNI(`plex.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`qbittorrent.${OLD_DOMAIN}`)
+    - match: HostSNI(`qbittorrent.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
           port: 443
