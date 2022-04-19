@@ -56,10 +56,10 @@ spec:
       services:
         - name: old-traefik
           port: 443
-    - match: HostSNI(`plex.${SECRET_OLD_DOMAIN}`)
-      services:
-        - name: old-traefik
-          port: 443
+    # - match: HostSNI(`plex.${SECRET_OLD_DOMAIN}`)
+    #   services:
+    #     - name: old-traefik
+    #       port: 443
     - match: HostSNI(`qbittorrent.${SECRET_OLD_DOMAIN}`)
       services:
         - name: old-traefik
