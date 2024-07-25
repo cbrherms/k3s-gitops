@@ -72,5 +72,9 @@ spec:
       services:
         - name: old-traefik
           port: 443
+    - match: HostSNI(`plexrequests2.${SECRET_OLD_DOMAIN}`)
+      services:
+        - name: old-traefik
+          port: 443
   tls:
     passthrough: true
